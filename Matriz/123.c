@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+
+int main() {
+ 
+    int n;
+    
+    while(scanf ("%d", &n) != EOF){
+ 
+        int mat[n][n];
+        
+        for(int i = 0; i < n; i++){
+            for( int j = 0; j < n; j++){
+                if(j == n-1-i){
+                    mat[i][j] = 2;
+                } else {
+                    if (j == i){
+                        mat[i][j]=1;
+                    } else {
+                        mat[i][j] = 3;
+                    }
+                }
+            }
+        }
+    
+        for (int i = 0; i < n; i++){
+            for (int j = 0; j < n; j++){
+                printf("%d", mat[i][j]);
+            }
+            printf("\n");
+        }
+    
+    } 
+ 
+    return 0;
+}
